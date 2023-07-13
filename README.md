@@ -1,38 +1,33 @@
-# create-svelte
+# SVELTE-TEST-3
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Intro
 
-## Creating a project
+In this project several `i18n` libraries / solutions are explored. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+TBD: 
+- Add features as carousel, burger menu for mobile devices, SSG, etc.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Branch `test1` 
 
-# create a new project in my-app
-npm create svelte@latest my-app
+Quick solution, proposed on [this site](https://svelte.dev/repl/de39de663ef2445b8fe17b79c500013b?version=4.0.5). 
+
+In order to use the command `$t("homepage.welcome")` while the translations object structure is as follows, some modifications are mandatory to the `i18n.js` file (idea taken from [here](https://github.com/kaisermann/svelte-i18n/blob/main/src/shared/delve.ts)).
+```js
+{
+  "en": {
+    "homepage": {
+      "welcome": "Lorem ipsum dolor sit amet.",
+      "title": "Lorem ipsum dolor sit amet."
+    }
+  },
+  "fr": {
+    ...
+  }
+}
 ```
+---
+Created: 2023-07-13 || Modified: 2023-07-13
 
-## Developing
+## References:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [Svelte Basic i18n](https://svelte.dev/repl/de39de663ef2445b8fe17b79c500013b?version=4.0.5)

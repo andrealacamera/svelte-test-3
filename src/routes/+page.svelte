@@ -8,7 +8,7 @@
     day: "numeric",
   });
 
-  $: name = $t("common.unknown");
+  let name = ''
 </script>
 
 <select bind:value={$locale}>
@@ -20,7 +20,7 @@
 <h1>{$t("homepage.title")}</h1>
 <label>
   Input:
-  <input bind:value={name} type="text" />
+  <input bind:value={name} type="text" placeholder={$t("common.placeholder")}/>
 </label>
 <h3>{$t("homepage.welcome", {name})}</h3>
 <p>{$t("homepage.time", {time})}</p>

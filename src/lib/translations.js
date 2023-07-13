@@ -7,7 +7,8 @@ export default {
     },
     "common": {
       "undefined": "undefined",
-      "unknown": "unknown"
+      "unknown": "unknown",
+      "placeholder": "Enter your name"
     }
   },
   it: {
@@ -18,7 +19,8 @@ export default {
     },
     "common": {
       "undefined": "non definito",
-      "unknown": "sconosciuto"
+      "unknown": "sconosciuto",
+      "placeholder": "Inserisci il tuo nome"
     }
   },
 };

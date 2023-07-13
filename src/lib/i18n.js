@@ -44,7 +44,7 @@ function translate(locale, key, vars) {
 
   // Grab the translation from the translations object.
   let text = extractFromObject(translations[locale], key);
-  console.log(text)
+  // console.log(text)
 
   if (!text) throw new Error(`no translation found for ${locale}.${key}`);
 

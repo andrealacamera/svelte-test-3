@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import { _, locale } from 'svelte-i18n'
+  console.log($locale)
+  locale.set('it')
+</script>
+
+<h1>{$_('homepage.welcome')}</h1>
+<p>{$_('homepage.text')}</p>
+

@@ -1,0 +1,9 @@
+{
+  "homepage": {
+    "welcome": "Benvenuti nella Homepage!",
+    "text": "lorem ipsum Italian version"
+  },
+  "common": {
+    "label": "Etichetta 1"
+  }
+}

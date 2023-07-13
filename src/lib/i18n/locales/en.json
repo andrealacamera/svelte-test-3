@@ -1,0 +1,9 @@
+{
+  "homepage": {
+    "welcome": "Welcome to Homepage!",
+    "text": "lorem ipsum"
+  },
+  "common": {
+    "label": "Label 1"
+  }
+}

@@ -1,38 +1,57 @@
-# create-svelte
+# SVELTE-TEST-3
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Intro
 
-## Creating a project
+In this project several `i18n` libraries / solutions are explored. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+TBD: 
+- Add features as carousel, burger menu for mobile devices, etc.
+- Copy final version of this file on the `main` branch!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Branch `test1` 
 
-# create a new project in my-app
-npm create svelte@latest my-app
+Quick solution, proposed on [this site](https://svelte.dev/repl/de39de663ef2445b8fe17b79c500013b?version=4.0.5). 
+
+In order to use the command `$t("homepage.welcome")` while the translations object structure is as follows, some modifications are mandatory to the `i18n.js` file (idea taken from [here](https://github.com/kaisermann/svelte-i18n/blob/main/src/shared/delve.ts)).
+```js
+{
+  "en": {
+    "homepage": {
+      "welcome": "Lorem ipsum dolor sit amet.",
+      "title": "Lorem ipsum dolor sit amet."
+    }
+  },
+  "fr": {
+    ...
+  }
+}
 ```
+---
+Created: 2023-07-13 || Modified: 2023-07-13
 
-## Developing
+## Branch `test2`
+Implements [svelte-i18n](https://www.npmjs.com/package/svelte-i18n) library. 
+See example and docs in the github pages. In particular, usage for [SvelteKit](https://github.com/kaisermann/svelte-i18n/blob/46b025ceebeb9bd68df0a2f30cc3c0775049ed85/docs/Svelte-Kit.md)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. **Add locale dictionaries**:  There are two different ways of adding a new dictionary of messages to a certain locale:
+- *Synchronous* with `addMessages(locale, dict)` method
+- *Async* with `register` method (inside a loader )
 
-```bash
-npm run dev
+2. **Initialize** lib: `init(config)`
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+> 1 + 2 in the `$lib/i18n/index.js` file.
 
-## Building
+3. **Setup**
+- For SSR we need to setup a server hook in `hooks.server.js`. (skipped!)
+- On frontend the language is set with `window.navigator.language`. 
 
-To create a production version of your app:
+> TBD: Save the choice on a cookie, which can be read before first step in case of returning user.
 
-```bash
-npm run build
-```
+4. **Localize** the page(s): `$format` method and `$_` and `$t` aliases. More details [here](https://github.com/kaisermann/svelte-i18n/blob/46b025ceebeb9bd68df0a2f30cc3c0775049ed85/docs/Formatting.md)
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## References (all branches):
+
+- [Svelte Basic i18n](https://svelte.dev/repl/de39de663ef2445b8fe17b79c500013b?version=4.0.5)
+- [svelte-i18n](https://www.npmjs.com/package/svelte-i18n)
+- [sveltekit-i18n](https://github.com/sveltekit-i18n/lib/tree/master)

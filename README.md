@@ -26,8 +26,6 @@ In order to use the command `$t("homepage.welcome")` while the translations obje
   }
 }
 ```
----
-Created: 2023-07-13 || Modified: 2023-07-13
 
 ## Branch `test2`
 Implements [svelte-i18n](https://www.npmjs.com/package/svelte-i18n) library. 
@@ -47,8 +45,10 @@ See example and docs in the github pages. In particular, usage for [SvelteKit](h
 
 > TBD: Save the choice on a cookie, which can be read before first step in case of returning user.
 
-4. **Localize** the page(s): `$format` method and `$_` and `$t` aliases. More details [here](https://github.com/kaisermann/svelte-i18n/blob/46b025ceebeb9bd68df0a2f30cc3c0775049ed85/docs/Formatting.md)
+4. **Localize** the page(s): `$format` method and `$_` and `$t` aliases. ore details [here](https://github.com/kaisermann/svelte-i18n/blob/46b025ceebeb9bd68df0a2f30cc3c0775049ed85/docs/Formatting.md)
 
+---
+Created: 2023-07-13 || Modified: 2023-07-13
 
 ## References (all branches):
 

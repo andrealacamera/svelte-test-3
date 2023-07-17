@@ -52,8 +52,14 @@ See example and docs in the github pages. In particular, usage for [SvelteKit](h
 
 Implements [sveltekit-i18n](https://github.com/sveltekit-i18n/lib) library. See example and docs in the github pages. 
 
+Modifications:
+- Removed `url` parameter in input of the load function (`+layout.js` file). 
+
+## Conclusions
+So far, best libs are 2 and 3. No way to establish which is the best. Further tests are necessary...
+
 ---
-Created: 2023-07-13 || Modified: 2023-07-14
+Created: 2023-07-13 || Modified: 2023-07-17
 
 ## References (all branches):
 

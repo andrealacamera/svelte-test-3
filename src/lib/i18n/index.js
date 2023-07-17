@@ -24,6 +24,11 @@ const config = ({
       ).default,
     },
     {
+      locale: 'en',
+      key: 'about',
+      loader: async () => (await import('./en/about.json')).default
+    },
+    {
       locale: 'it',
       key: 'common',
       loader: async () => (
@@ -37,7 +42,12 @@ const config = ({
       loader: async () => (
         await import('./it/home.json')
       ).default,
-    }
+    },
+    {
+      locale: 'it',
+      key: 'about',
+      loader: async () => (await import('./it/about.json')).default
+    },
   ],
 });
 

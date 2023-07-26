@@ -47,8 +47,17 @@ See example and docs in the github pages. In particular, usage for [SvelteKit](h
 
 4. **Localize** the page(s): `$format` method and `$_` and `$t` aliases. More details [here](https://github.com/kaisermann/svelte-i18n/blob/46b025ceebeb9bd68df0a2f30cc3c0775049ed85/docs/Formatting.md)
 
+
+5. **Extras**: 
+`svelte-i18n` uses the [FormatJS](https://formatjs.io/) library collection, which itself uses the [ICU message defacto standard](http://userguide.icu-project.org/). ICU messages use {curly braces} for interpolated values.
+
+#### ICU plural messages 
+The `{key, plural, matches}` syntax is standard ICU stuff. Example:
+```json
+"test": "I want to drink {n, plural, 0 {beers} 1 {beer} other {a lot of beers}}"
+
 ---
-Created: 2023-07-13 || Modified: 2023-07-13
+Created: 2023-07-13 || Modified: 2023-07-26
 
 ## References (all branches):
 

@@ -54,7 +54,16 @@ See example and docs in the github pages. In particular, usage for [SvelteKit](h
 #### ICU plural messages 
 The `{key, plural, matches}` syntax is standard ICU stuff. Example:
 ```json
-"test": "I want to drink {n, plural, 0 {beers} 1 {beer} other {a lot of beers}}"
+{
+  "test": "I want to drink {n, plural, 0 {beers} 1 {beer} other {a lot of beers}}"
+}
+```
+
+```svelte
+<p>{$t('test', {n: thenumber})}</p>
+```
+
+More details [here](https://phrase.com/blog/posts/how-to-localize-a-svelte-app-with-svelte-i18n/)
 
 ---
 Created: 2023-07-13 || Modified: 2023-07-26
